@@ -4,7 +4,7 @@
   "description": "Sample project that uses Material-UI",
   "repository": {
     "type": "git",
-    "url": "https://github.com/callemall/material-ui.git"
+    "url": "git+https://github.com/karenxiong/the-mind-of-an-introvert.git"
   },
   "scripts": {
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
@@ -36,5 +36,8 @@
     "react-color": "^2.2.6",
     "react-dom": "^15.3.1",
     "react-tap-event-plugin": "^1.0.0"
+  },
+  "engines": {
+    "node": "7.0.0"
   }
 }
