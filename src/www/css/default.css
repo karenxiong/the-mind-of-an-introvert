@@ -7,15 +7,16 @@ h1 {
   letter-spacing: 3px;
 }
 h2 {
-      font-size: 24px;
+      font-size: 40px;
       /*text-transform: uppercase;*/
-      color: #303030;
-      font-weight: 600;
+      color: #26A69A;
+      font-weight: 700;
       margin-bottom: 30px;
+      letter-spacing: 2px;
   }
 h4 {
       font-size: 20px;
-      line-height: 1.375em;
+      line-height: 1.8em;
       color: #303030;
       font-weight: 400;
       margin-bottom: 30px;
@@ -39,8 +40,12 @@ h4 {
 .jumbotron .scrolldown {
   font-size: 14px;
 }
-.carl, .test{
+.carl {
   width: 500px;
+}
+
+.extrovintro {
+  width: 600px;
 }
 .container-fluid {
       padding: 60px 50px;
