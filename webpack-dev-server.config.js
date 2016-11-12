@@ -10,7 +10,10 @@ const config = {
     'webpack/hot/dev-server',
     'webpack/hot/only-dev-server',
     path.join(__dirname, '/src/app/app.js'),
+    // 'webpack-hot-middleware/client?reload=true',
+    // './index-reloader'
   ],
+  publicPath: "/www/",
   // Server Configuration options
   devServer: {
     contentBase: 'src/www', // Relative directory for base of server

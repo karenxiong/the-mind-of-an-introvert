@@ -1,46 +1,52 @@
-import React from 'react';
-import Snackbar from 'material-ui/Snackbar';
-import RaisedButton from 'material-ui/RaisedButton';
-
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import React from 'react'
+import Snackbar from 'material-ui/Snackbar'
+import RaisedButton from 'material-ui/RaisedButton'
 
 export default class CalendarSnackbar extends React.Component {
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       open: false,
-    };
+      buttonClicked: false
+    }
   }
 
   handleTouchTap() {
     this.setState({
-      open: true,
-    });
-  };
+      open: true
+    })
+  }
 
   handleRequestClose() {
     this.setState({
-      open: false,
-    });
-  };
+      open: false
+    })
+  }
 
   render() {
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+      <div>
         <RaisedButton
-          onTouchTap={this.handleTouchTap}
           label="Add to my calendar"
+          secondary
+          onTouchTap={() => {
+            this.setState({buttonClicked: true})
+            this.handleTouchTap()
+          }}
         />
+        
+        {this.state.buttonClicked ? 
+          <img src="img/ex.gif" alt="ex" /> : <img src="img/mouse.gif" alt="ex" /> 
+        }
+
         <Snackbar
           open={this.state.open}
           message="Event added to your calendar"
           autoHideDuration={4000}
-          onRequestClose={this.handleRequestClose}
+          onRequestClose={this.handleRequestClose.bind(this)}
         />
-      </MuiThemeProvider>
-    );
+      </div>
+    )
   }
 }
