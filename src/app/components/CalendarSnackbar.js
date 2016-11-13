@@ -28,8 +28,8 @@ export default class CalendarSnackbar extends React.Component {
     return (
       <div>
         <RaisedButton
-          label="Add to my calendar"
-          secondary
+          label="Cancel Social Event"
+          primary
           onTouchTap={() => {
             this.setState({buttonClicked: true})
             this.handleTouchTap()
@@ -37,12 +37,12 @@ export default class CalendarSnackbar extends React.Component {
         />
         
         {this.state.buttonClicked ? 
-          <img src="img/ex.gif" alt="ex" /> : <img src="img/mouse.gif" alt="ex" /> 
+          <img className="jump-gif" src="img/jump.gif" alt="ex" /> : <img className="jump-img" src="img/jump.jpg" alt="jump" /> 
         }
 
         <Snackbar
           open={this.state.open}
-          message="Event added to your calendar"
+          message="Social Event Cancelled"
           autoHideDuration={4000}
           onRequestClose={this.handleRequestClose.bind(this)}
         />

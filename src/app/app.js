@@ -8,7 +8,7 @@ import IntrovertTheme from './IntrovertTheme'
 
 // import Main from './Main' // Our custom react component
 import CalendarSnackbar from './components/CalendarSnackbar' // Our custom react component
-
+import AniSlider from './components/AniSlider'
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin()
@@ -19,3 +19,7 @@ injectTapEventPlugin()
 render(<MuiThemeProvider muiTheme={getMuiTheme(IntrovertTheme)}>
 				<CalendarSnackbar />
 			</MuiThemeProvider>, document.getElementById('calendar-snackbar'))
+
+render(<MuiThemeProvider muiTheme={getMuiTheme(IntrovertTheme)}>
+				<AniSlider />
+			</MuiThemeProvider>, document.getElementById('AniSlider'))
