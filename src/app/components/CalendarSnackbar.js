@@ -28,6 +28,7 @@ export default class CalendarSnackbar extends React.Component {
     return (
       <div>
         <RaisedButton
+          className="snackbtn"
           label="Cancel Social Event"
           primary
           onTouchTap={() => {
@@ -37,7 +38,7 @@ export default class CalendarSnackbar extends React.Component {
         />
         
         {this.state.buttonClicked ? 
-          <img className="jump-gif" src="img/jump.gif" alt="ex" /> : <img className="jump-img" src="img/jump.jpg" alt="jump" /> 
+          <img className="img-responsive" src="img/jump.gif" alt="ex" /> : <img className="img-responsive" src="img/jump.jpg" alt="jump" /> 
         }
 
         <Snackbar

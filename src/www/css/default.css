@@ -1,3 +1,12 @@
+@media screen and (max-width: 1440px) {
+  .img-responsive {
+    max-width: 90%;
+    height: auto;
+  }
+}
+* {
+  margin: 0;
+}
 body {
       font: 400 15px Source Sans Pro;
       line-height: 1.8;
@@ -41,14 +50,15 @@ h4 {
   font-size: 14px;
 }
 .carl {
-  width: 500px;
-}
-.jump-img, .jump-gif {
-  width: 500px;
-  clear: both;
+  width: 100%;
 }
 .extrovintro {
-  width: 600px;
+  width: 100%;
+}
+
+.snackbtn {
+  margin-top: 100px;
+  margin-left: 145px;
 }
 .container-fluid {
       padding: 60px 50px;

@@ -19,7 +19,7 @@ export default class AniSlider extends Component {
 
     return (
       <div>
-        <Slider style={{width: '50%', margin: 'auto'}}
+        <Slider style={{width: '85%'}}
           min={100} max={700} step={1} 
           defaultValue={100} 
           value={this.state.sliderValue} 
