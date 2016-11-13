@@ -12,12 +12,14 @@ const config = {
   output: {
     path: buildPath, // Path of output file
     filename: 'app.js', // Name of output file
+    publicPath: "/www/"
   },
   plugins: [
     // Define production build to allow React to strip out unnecessary checks
     new webpack.DefinePlugin({
       'process.env':{
-        'NODE_ENV': JSON.stringify('production')
+        'NODE_ENV': JSON.stringify('production'),
+        'SERVER_BASE_ROUTE': JSON.stringify(process.env.SERVER_BASE_ROUTE)
       }
     }),
     // Minify the bundle
@@ -41,6 +43,19 @@ const config = {
         loaders: ['babel-loader'], // react-hot is like browser sync and babel loads jsx and es6-7
         exclude: [nodeModulesPath],
       },
+      { 
+        test: /\.scss?$/,
+        loader: 'style!css!sass',
+        include: path.join(__dirname, 'www/css') 
+      },
+      { 
+        test: /\.png$/,
+        loader: 'file' 
+      },
+      { 
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file'
+      }
     ],
   },
 };
