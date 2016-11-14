@@ -2,6 +2,8 @@ import React from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
 // From https://github.com/oliviertassinari/react-swipeable-views
 import SwipeableViews from 'react-swipeable-views';
+import CalendarSnackbar from './CalendarSnackbar';
+import AniSlider from './AniSlider';
 
 const styles = {
   headline: {
@@ -45,15 +47,41 @@ export default class Tabz extends React.Component {
           index={this.state.slideIndex}
           onChangeIndex={this.handleChange}
         >
-          <div>
-            <h2 style={styles.headline}>Tabs with slide effect</h2>
-            Swipe to see the next slide.<br />
+          <div className="text-center">
+            <h2>Events</h2>
+            <h4>Introverts tend to think about things before they speak - 
+            they want to have a full understanding of a concept before 
+            they voice an opinion or offer an explanation. For this reason, 
+            introverts tend to prepare themselves well ahead of time before 
+            any social event. This often causes stress which would result in 
+            social events appearing tedious for introverts.
+            <br /><br /> Click on the tabs to explore the affects of social events on introverts. </h4>
           </div>
           <div style={styles.slide}>
-            slide n°2
+            <div className="col-sm-7">
+              <h2>Scheduled Events</h2>
+              <h4>Going out to events may seem fun and exciting to extraverts, but to introverts 
+              it is exhausting. The thought of long socializations and small talks would seem like a nighmare to introverts.
+              Though sometimes, events may be cancelled and that would exhilarate them.
+              <br /><br /> Click on the button on the right to cancel a social event.</h4>
+            </div>
+            <div className="col-sm-5">
+              <CalendarSnackbar />
+            </div>
           </div>
           <div style={styles.slide}>
-            slide n°3
+            <div className="col-sm-7">
+              <h2>Event Durations</h2>
+              <h4>Extraverts gain energy from social interactions but introverts have to 
+              expend energy in those social settings. After spending a long period of time 
+              at a party introverts often feel a need to "recharge" by spending a long period 
+              of time alone. <br /><br />Move the slider on the right to determine the duration of 
+              the party. The more you move, the more time and energy is drained at a party.</h4>
+              <br />
+            </div>
+            <div className="col-sm-5">
+              <AniSlider />
+            </div>
           </div>
         </SwipeableViews>
       </div>

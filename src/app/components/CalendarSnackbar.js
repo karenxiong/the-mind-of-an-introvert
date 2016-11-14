@@ -26,9 +26,8 @@ export default class CalendarSnackbar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="snackbtn">
         <RaisedButton
-          className="snackbtn"
           label="Cancel Social Event"
           primary
           onTouchTap={() => {

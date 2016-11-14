@@ -43,14 +43,16 @@ class stepz extends React.Component {
 
     return (
       <div style={{margin: '12px 0'}}>
-        <RaisedButton
-          label={stepIndex === 2 ? 'Finish' : 'Next'}
-          disableTouchRipple={true}
-          disableFocusRipple={true}
-          primary={true}
-          onTouchTap={this.handleNext}
-          style={{marginRight: 12}}
-        />
+        {stepIndex === 2 ? undefined :
+          <RaisedButton
+            label={'Next'}
+            disableTouchRipple={true}
+            disableFocusRipple={true}
+            primary={true}
+            onTouchTap={this.handleNext}
+            style={{marginRight: 12}}
+          />
+        }
         {step > 0 && (
           <FlatButton
             label="Back"
@@ -101,19 +103,6 @@ class stepz extends React.Component {
             </StepContent>
           </Step>
         </Stepper>
-        {finished && (
-          <p style={{margin: '20px 0', textAlign: 'center'}}>
-            <a
-              href="#"
-              onClick={(event) => {
-                event.preventDefault();
-                this.setState({stepIndex: 0, finished: false});
-              }}
-            >
-              Click here
-            </a> to reset the example.
-          </p>
-        )}
       </div>
     );
   }

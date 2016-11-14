@@ -1,7 +1,30 @@
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1580px) {
   .img-responsive {
-    max-width: 90%;
+    /*max-width: 90%;*/
     height: auto;
+  }
+}
+@media (max-width: 425px) {
+  h2 {
+    font-size: 18px;
+    margin-bottom: initial;
+  }
+  h4 {
+    font-size: 12px;
+    margin-bottom: initial;
+  }
+  #Tabz button span{
+    font-size: 10px !important;
+  }
+}
+@media (max-width: 525px) {
+  #Tabz button div div{
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 425px) {
+  #Tabz button div div{
+    font-size: 8px !important;
   }
 }
 * {
@@ -50,32 +73,6 @@ h6 {
   width: 34px !important;
 }
 
-@media (max-width: 425px) {
-  h2 {
-    font-size: 18px;
-    margin-bottom: initial;
-  }
-  h4 {
-    font-size: 12px;
-    margin-bottom: initial;
-  }
-  #Tabz button span{
-    font-size: 10px !important;
-  }
-}
-
-@media (max-width: 525px) {
-  #Tabz button div div{
-    font-size: 12px !important;
-  }
-}
-
-@media (max-width: 425px) {
-  #Tabz button div div{
-    font-size: 8px !important;
-  }
-}
-
 .jumbotron {
       background-color: #26A69A;
       color: #fff;
@@ -102,8 +99,8 @@ h6 {
 }
 
 .snackbtn {
-  margin-top: 100px;
-  margin-left: 145px;
+  text-align: center;
+  margin-top: 50px;
 }
 .container-fluid {
       padding: 60px 50px;
