@@ -23,3 +23,7 @@ render(<MuiThemeProvider muiTheme={getMuiTheme(IntrovertTheme)}>
 render(<MuiThemeProvider muiTheme={getMuiTheme(IntrovertTheme)}>
 				<AniSlider />
 			</MuiThemeProvider>, document.getElementById('AniSlider'))
+
+render(<MuiThemeProvider muiTheme={getMuiTheme(IntrovertTheme)}>
+				<RaisedBtn />
+			</MuiThemeProvider>, document.getElementById('RaisedBtn'))
