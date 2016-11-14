@@ -9,6 +9,9 @@ import IntrovertTheme from './IntrovertTheme'
 // import Main from './Main' // Our custom react component
 import CalendarSnackbar from './components/CalendarSnackbar' // Our custom react component
 import AniSlider from './components/AniSlider'
+import RaisedBtn from './components/RaisedBtn'
+// import Tabz from './components/Tabz'
+import Stepz from './components/Stepz'
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin()
@@ -27,3 +30,11 @@ render(<MuiThemeProvider muiTheme={getMuiTheme(IntrovertTheme)}>
 render(<MuiThemeProvider muiTheme={getMuiTheme(IntrovertTheme)}>
 				<RaisedBtn />
 			</MuiThemeProvider>, document.getElementById('RaisedBtn'))
+
+// render(<MuiThemeProvider muiTheme={getMuiTheme(IntrovertTheme)}>
+// 				<Tabz />
+// 			</MuiThemeProvider>, document.getElementById('Tabz'))
+
+render(<MuiThemeProvider muiTheme={getMuiTheme(IntrovertTheme)}>
+				<Stepz />
+			</MuiThemeProvider>, document.getElementById('Stepz'))

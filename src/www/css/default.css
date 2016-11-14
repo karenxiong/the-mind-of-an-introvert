@@ -32,6 +32,12 @@ h4 {
       margin-bottom: 30px;
       font-weight: 400;
   }
+h6 {
+  font-size: 18px;
+  line-height: 1.8em;
+  font-weight: 400;
+}
+
 @media (max-width: 425px) {
   h2 {
     font-size: 18px;
