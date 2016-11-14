@@ -71,7 +71,7 @@ class stepz extends React.Component {
       <div style={{maxWidth: 380, maxHeight: 800, margin: 'auto'}}>
         <Stepper activeStep={stepIndex} orientation="vertical">
           <Step>
-            <StepLabel>Step One</StepLabel>
+            <StepLabel className="step-label">Step One</StepLabel>
             <StepContent>
               <h6>
                 New information runs through a pathway that is associated with long term memory 
@@ -82,7 +82,7 @@ class stepz extends React.Component {
             </StepContent>
           </Step>
           <Step>
-            <StepLabel>Step Two</StepLabel>
+            <StepLabel className="step-label">Step Two</StepLabel>
             <StepContent>
               <h6>As introverts process new information, they also process everything in their 
               environment and pay attention to all the sensory details in the environment, 
@@ -91,7 +91,7 @@ class stepz extends React.Component {
             </StepContent>
           </Step>
           <Step>
-            <StepLabel>Step Three</StepLabel>
+            <StepLabel className="step-label">Step Three</StepLabel>
             <StepContent>
               <h6>
               As introverts are thinking, they reach back into long term memory to 

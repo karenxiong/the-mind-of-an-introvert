@@ -38,6 +38,18 @@ h6 {
   font-weight: 400;
 }
 
+.step-label {
+  padding-left: 9px !important;
+  font-size: 20px !important;
+}
+.step-label span {
+  width: 54px !important
+}
+.step-label span svg {
+  height: 34px !important;
+  width: 34px !important;
+}
+
 @media (max-width: 425px) {
   h2 {
     font-size: 18px;
@@ -47,7 +59,23 @@ h6 {
     font-size: 12px;
     margin-bottom: initial;
   }
+  #Tabz button span{
+    font-size: 10px !important;
+  }
 }
+
+@media (max-width: 525px) {
+  #Tabz button div div{
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  #Tabz button div div{
+    font-size: 8px !important;
+  }
+}
+
 .jumbotron {
       background-color: #26A69A;
       color: #fff;
