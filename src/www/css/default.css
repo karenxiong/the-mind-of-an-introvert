@@ -1,12 +1,38 @@
-@media screen and (max-width: 1580px) {
-  .img-responsive {
-    /*max-width: 90%;*/
-    height: auto;
+@media (min-width: 320px) {
+  h1 {
+    font-size: 26px;
   }
-}
-@media (max-width: 425px) {
+ .jumbotron p {
+    font-size: 18px;
+  }
   h2 {
     font-size: 18px;
+    margin-bottom: initial;
+  }
+  h4 {
+    font-size: 10px;
+    margin-bottom: initial;
+  }
+  .container-fluid {
+    padding: none;
+  }
+  .carl {
+    width: 70%;
+  }
+  .jumbotron {
+    height: 800px;
+  }
+  .scroll {
+    width: 150px;
+    vertical-align: middle;
+  }
+  .jumbotron .scrolldown {
+    font-size: 10px;
+  }
+}
+@media (min-width: 481px) {
+  h2 {
+    font-size: 22px;
     margin-bottom: initial;
   }
   h4 {
@@ -16,17 +42,122 @@
   #Tabz button span{
     font-size: 10px !important;
   }
-}
-@media (max-width: 525px) {
-  #Tabz button div div{
-    font-size: 12px !important;
-  }
-}
-@media (max-width: 425px) {
   #Tabz button div div{
     font-size: 8px !important;
   }
+  .carl {
+    width: 70%;
+  }
+  .jumbotron {
+    height: 900px;
+  }
+  .jumbotron .scrolldown {
+    font-size: 12px;
+  }
 }
+@media (min-width: 641px) {
+  h2 {
+    font-size: 28px;
+    margin-bottom: initial;
+  }
+  h4 {
+    font-size: 14px;
+    margin-bottom: initial;
+  }
+  .container-fluid {
+      padding: 30px 20px;
+  }
+  #Tabz button div div{
+    font-size: 12px !important;
+  }
+  .carl {
+    width: 100%;
+  }
+  .jumbotron {
+    height: 900px;
+  }
+  .scroll {
+    width: 200px;
+    margin: auto;
+  }
+}
+@media (min-width: 961px) {
+  h2 {
+    font-size: 32px;
+    margin-bottom: initial;
+  }
+  h4 {
+    font-size: 16px;
+    margin-bottom: initial;
+  }
+  .container-fluid {
+      padding: 40px 30px;
+  }
+  .carl {
+    width: 100%;
+  }
+  .jumbotron {
+    height: 800px;
+  }
+  .scroll {
+    width: 200px;
+    margin: auto;
+  }
+}
+@media (min-width: 1025px) {
+  h2 {
+    font-size: 36px;
+    margin-bottom: initial;
+  }
+  h4 {
+    font-size: 18px;
+    margin-bottom: initial;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .carl {
+    width: 100%;
+  }
+  .jumbotron {
+    height: 900px;
+  }
+  .scroll {
+    width: 200px;
+    margin: auto;
+  }
+}
+@media (min-width: 1281) {
+  h2 {
+    font-size: 40px;
+    margin-bottom: initial;
+  }
+  h4 {
+    font-size: 20px;
+    margin-bottom: initial;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .carl {
+    width: 100%;
+  }
+  .jumbotron {
+  height: 1000px;
+  }
+  .scroll {
+    width: 200px;
+    margin: auto;
+  }
+  .jumbotron .scrolldown {
+    font-size: 14px;
+  }
+}
+/*@media (max-width: 425px) {
+  #Tabz button div div{
+    font-size: 8px !important;
+  }
+}*/
 * {
   margin: 0;
 }
@@ -40,15 +171,14 @@ body {
       color: #818181;
   }
 h2 {
-      font-size: 40px;
-      /*text-transform: uppercase;*/
+      /*font-size: 40px;*/
       color: #26A69A;
       font-weight: 700;
       padding-bottom: 50px;
       letter-spacing: 2px;
   }
 h4 {
-      font-size: 20px;
+     /* font-size: 20px;*/
       line-height: 1.8em;
       color: #303030;
       font-weight: 400;
@@ -79,21 +209,18 @@ h6 {
       padding: 300px 25px;
       font-family: Source Sans Pro, Helvetica;
       font-weight: lighter;
-      height: 900px;
   }
 .scroll {
-    width: 200px;
-    margin-left: 20px;
+  margin-left: 16px;
   }
 .scrolldown {
     margin-top: -18px;
+    text-align: center;
   }
-.jumbotron .scrolldown {
+/*.jumbotron .scrolldown {
   font-size: 14px;
-}
-.carl {
-  width: 100%;
-}
+}*/
+
 .extrovintro {
   width: 100%;
 }
@@ -102,9 +229,6 @@ h6 {
   text-align: center;
   margin-top: 50px;
 }
-.container-fluid {
-      padding: 60px 50px;
-  }
 .bg-grey {
       background-color: #E0F2F1;
   }
@@ -180,7 +304,7 @@ h6 {
       font-size: 14px;
   }
 .panel-footer .btn {
-      margin: 15px 0;
+      /*margin: 15px 0;*/
       background-color: #f4511e;
       color: #fff;
   }
@@ -209,10 +333,10 @@ h6 {
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff;
 }
-footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #f4511e;
+footer {
+      font-size: 10px;
+      margin-bottom: -20px;
+      color: grey;
   }
 .slideanim {visibility:hidden;}
 .slide {
