@@ -1,9 +1,10 @@
-import React from 'react';
-import {Tabs, Tab} from 'material-ui/Tabs';
+import React from 'react'
+import {Tabs, Tab} from 'material-ui/Tabs'
 // From https://github.com/oliviertassinari/react-swipeable-views
-import SwipeableViews from 'react-swipeable-views';
-import CalendarSnackbar from './CalendarSnackbar';
-import AniSlider from './AniSlider';
+import SwipeableViews from 'react-swipeable-views'
+import AniSlider from './AniSlider'
+import Snackbar from 'material-ui/Snackbar'
+import RaisedButton from 'material-ui/RaisedButton'
 
 const styles = {
   headline: {
@@ -15,22 +16,36 @@ const styles = {
   slide: {
     padding: 10
   }
-};
+}
 
 export default class Tabz extends React.Component {
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      slideIndex: 0
-    };
+      slideIndex: 0,
+      open: false,
+      buttonClicked: false
+    }
+  }
+  
+  handleTouchTap() {
+    this.setState({
+      open: true
+    })
+  }
+
+  handleRequestClose() {
+    this.setState({
+      open: false
+    })
   }
 
   handleChange = (value) => {
     this.setState({
       slideIndex: value
-    });
-  };
+    })
+  }
 
   render() {
     return (
@@ -65,8 +80,19 @@ export default class Tabz extends React.Component {
               Though sometimes, events may be cancelled and that would exhilarate them.
               <br /><br /> Click on the button on the right to cancel a social event.</h4>
             </div>
-            <div className="col-sm-5">
-              <CalendarSnackbar />
+            <div className="col-sm-5 snackbtn">
+              <RaisedButton
+                label="Cancel Social Event"
+                primary
+                onTouchTap={() => {
+                  this.setState({buttonClicked: true})
+                  this.handleTouchTap()
+                }}
+              />
+              
+              {this.state.buttonClicked ? 
+                <img className="img-responsive" src="img/jump.gif" alt="ex" /> : <img className="img-responsive" src="img/jump.jpg" alt="jump" /> 
+              }
             </div>
           </div>
           <div style={styles.slide}>
@@ -84,7 +110,13 @@ export default class Tabz extends React.Component {
             </div>
           </div>
         </SwipeableViews>
+        <Snackbar
+          open={this.state.open}
+          message="Social Event Cancelled"
+          autoHideDuration={4000}
+          onRequestClose={this.handleRequestClose.bind(this)}
+        />
       </div>
-    );
+    )
   }
 }
